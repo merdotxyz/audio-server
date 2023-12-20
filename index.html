@@ -2,46 +2,69 @@
 <html lang="en">
 
 <head>
+  
   <meta charset="UTF-8">
+  <meta name="description" content="Audio Server by Mindseyerecords.xyz">
+  <meta name="keywords" content="Audio, Server, Mindseyerecords.xyz">
+  <meta name="author" content="Mindseyerecords.xyz">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MER.XYZ Audio Server</title>
+  
   <style>
     body {
       background-image: url('Background1.jpeg');
       background-repeat: no-repeat;
       background-attachment: fixed;
-      background-size: 40%;
+      background-size: 50%;
       background-color: black;
       background-position: center;
       font-family: "Courier New";
       font-size: 12px;
-
-    }
-
-    .text {
       color: white;
-      text-align: center;
+
     }
 
-       .audio-link {
-      text-align: center;
+    .container {
+      display: block;
+      width: 40%;
+      margin: 0 auto;
+      position: relative;
     }
+
+    .audio-link, .mer-link, #date-time, .forthcoming, .archive {
+    text-align: center;
+      
+    }
+    
+    a {
+      color: white;
+    }
+
+
+    .forthcoming, .archive {
+     display: none;
+    }
+
+ 
   </style>
+
 </head>
 
 <body>
+
+  <div class="container">
   <div class="audio-link">
     <audio src="http://broadcast.shoutstream.co.uk/stream/8000" controls autoplay="autoplay" id="MusicPlayer">
       Your browser does not support the audio.
     </audio>
   </div>
 
-  <div class="text">
-    <p><a href="https://mindseyerecords.xyz" style="color: white;" target="_blank">Mindseyerecords.xyz</a></p>
+  <div class="mer-link">
+    <p><a href="https://mindseyerecords.xyz" target="_blank">Mindseyerecords.xyz</a></p>
     <p>~Audio Server~</p>
   </div>
 
-  <div class="text" id=date-time class="container">
+  <div id=date-time>
     <div class="display-date">
       <span id="day">day</span>,
       <span id="daynum">00</span>
@@ -49,6 +72,17 @@
       <span id="year">0000</span>
     </div>
     <div class="display-time"></div>
+  </div>
+
+  <div class="forthcoming">
+    <h4>Forthcoming/</h4>
+    <p></p>
+    
+  </div>
+
+  <div class="archive">
+    <h4>Archive/</h4>
+      <a></a>
   </div>
 
   <script>
@@ -106,18 +140,6 @@
 
     updateDate();
   </script>
-  </div>
-
-  <div>
-    <script>
-      $(document).ready(function () {
-        var bgArray = ['Background1.jpeg', 'Background2.jpeg', 'Background3.jpeg', 'Background4.jpeg'];
-        var bg = bgArray[Math.floor(Math.random() * bgArray.length)];
-        var path = 'Web Projects/Mindcast Player/';
-        var imageUrl = path + bg;
-        $('body').css('background-image', 'url(' + imageUrl + ')');
-      });
-    </script>
   </div>
 
 </body>
