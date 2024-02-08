@@ -12,7 +12,7 @@
   
   <style>
     body {
-      background-image: url('Background1.jpeg');
+      background-image: url('');
       background-repeat: no-repeat;
       background-attachment: fixed;
       background-size: 50%;
@@ -154,6 +154,19 @@
     }
 
     updateDate();
+  </script>
+
+  <script>
+     let body = document.body;
+     let bodyBackgroundImages = ['Background1.jpeg', 'Background2.jpeg', 'Background3.jpeg', 'Background4.jpeg'];
+
+    function random () {
+    let randomIndexBg = Math.floor(Math.random() * bodyBackgroundImages.length);
+    let randomBodyBackgroundImage = bodyBackgroundImages[randomIndexBg];
+    body.style.backgroundImage = `url('${randomBodyBackgroundImage}')`;
+    }
+
+    random();
   </script>
   </div>
 
