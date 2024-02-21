@@ -9,7 +9,7 @@
   <meta name="author" content="Mindseyerecords.xyz">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MER.XYZ Audio Server</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+ 
   
   <style>
     body {
@@ -96,12 +96,27 @@
     
         playButton.onclick = playStream;
     
-        pauseButton.onclick = function() {
+        function pauseStream () {
             audio.pause();
             playButton.style.display = 'inline-block';
             pauseButton.style.display = 'none';
         }
-    </script>
+
+        pauseButton.onclick = pauseStream
+
+        let isPlaying = false;
+
+        document.addEventListener('keydown', function(e) {
+        if (e.key === " ") {
+        if (isPlaying) {
+            pauseStream();
+        } else {
+            playStream();
+        }
+        isPlaying = !isPlaying;
+       }
+       });
+    </script>  
 
   <div class="mer-link">
     <p><a href="https://mindseyerecords.xyz" target="_blank">Mindseyerecords.xyz</a></p>
