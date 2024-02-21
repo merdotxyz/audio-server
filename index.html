@@ -1,233 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  
   <meta charset="UTF-8">
   <meta name="description" content="Audio Server by Mindseyerecords.xyz">
   <meta name="keywords" content="Audio, Server, Mindseyerecords.xyz">
   <meta name="author" content="Mindseyerecords.xyz">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MER.XYZ Audio Server</title>
- 
-  
-  <style>
-    body {
-      background-image: url('');
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-      background-size: 50%;
-      background-color: black;
-      background-position: center;
-      font-family: "Courier New";
-      font-size: 12px;
-      color: white;
-
-    }
-
-    .container {
-      display: block;
-      width: 80%;
-      margin: 0 auto;
-      position: relative;
-     
-      text-align: center;
-     
-    }
-
-    #play-button {
-      background-color: white;
-      border: rgb(255, 255, 255) dotted 1px;
-      font-family: 'Courier New', Courier, monospace;
-      font-size: 12px;
-      font-weight: bold;
-      cursor: pointer;
-      color: black;
-      
-    }
-
-    #pause-button {
-      background-color: white;
-      border: rgb(255, 255, 255) dotted 1px;
-      font-family: 'Courier New', Courier, monospace;
-      font-size: 12px;
-      font-weight: bold;
-      cursor: pointer;
-      color: black;
-      display: none;
-      
-    }
-
-    
-    a {
-      color: white;
-    }
-
-
-    .forthcoming, .archive, .now-playing {
-    
-    }
-
-    .now-playing {
-      display: none;
-    }
-
- 
-  </style>
-
+  <link href="./Audio Server Stylesheet.css" rel='stylesheet'>
 </head>
-
 <body>
-
   <div class="container">
-
     <button id="play-button">Play</button>
     <button id="pause-button">Pause</button>
-    <script>
-        let playButton = document.getElementById('play-button');
-        let pauseButton = document.getElementById('pause-button');
-        let audio = new Audio('http://broadcast.shoutstream.co.uk/stream/8000');
-    
-        function playStream() {
-            audio.play();
-            playButton.style.display = 'none';
-            pauseButton.style.display = 'inline-block';
-        }
-    
-        playButton.onclick = playStream;
-    
-        function pauseStream () {
-            audio.pause();
-            playButton.style.display = 'inline-block';
-            pauseButton.style.display = 'none';
-        }
-
-        pauseButton.onclick = pauseStream
-
-        let isPlaying = false;
-
-        document.addEventListener('keydown', function(e) {
-        if (e.key === " ") {
-        if (isPlaying) {
-            pauseStream();
-        } else {
-            playStream();
-        }
-        isPlaying = !isPlaying;
-       }
-       });
-    </script>  
-
-  <div class="mer-link">
-    <p><a href="https://mindseyerecords.xyz" target="_blank">Mindseyerecords.xyz</a></p>
-    <p>~Audio Server~</p>
-  </div>
-
-  <div id=date-time>
-    <div class="display-date">
-      <span id="day">day</span>,
-      <span id="daynum">00</span>
-      <span id="month">month</span>
-      <span id="year">0000</span>
+    <div class="mer-link">
+      <p><a href="https://mindseyerecords.xyz" target="_blank">Mindseyerecords.xyz</a></p>
+      <p>~Audio Server~</p>
     </div>
-    <div class="display-time"></div>
-  </div>
-
-  <div class="now-playing">
-    <h4>Now playing/</h4>
-
-   </div>
-
-  <div class="forthcoming">
-    <h4>Forthcoming/</h4>
-    <p>Archaic Vaults - Line up TBA</p>
-    <p>Lost Domain - Line up TBA</p>
-    
-   
-    
-  </div>
-
-  <div class="archive">
-    <h4>Archive/</h4>
-    <p><a href="https://drive.google.com/drive/folders/1XcdJ0AU9QmIIVGSliU6_dPyfJfdSrh7W?usp=sharing">Images</a></p>
-    <p>Chosen1 [Chronic Illness, 11/02/24]</p>
-    <p>Sin Of The Father [Chronic Illness, 11/02/24]</p>
-    <p>TROJANOVSKX [Chronic Illness, 11/02/24]</p>
-    <p>Laboranta [Chronic Illness, 11/02/24]</p>
-    <p>MERXYZ4 Ivory Black | Black Bile [Premier]</p>
+    <div id=date-time>
+      <div class="display-date">
+        <span id="day">day</span>,
+        <span id="daynum">00</span>
+        <span id="month">month</span>
+        <span id="year">0000</span>
+      </div>
+      <div class="display-time"></div>
+    </div>
+    <div class="forthcoming">
+      <h4>Forthcoming/</h4>
+      <p>Archaic Vaults - Line up TBA</p>
+      <p>Lost Domain - Line up TBA</p>
+    </div>
+    <div class="archive">
+      <h4>Archive/</h4>
+      <p><a href="https://drive.google.com/drive/folders/1XcdJ0AU9QmIIVGSliU6_dPyfJfdSrh7W?usp=sharing">Images</a></p>
+      <p>Chosen1 [Chronic Illness, 11/02/24]</p>
+      <p>Sin Of The Father [Chronic Illness, 11/02/24]</p>
+      <p>TROJANOVSKX [Chronic Illness, 11/02/24]</p>
+      <p>Laboranta [Chronic Illness, 11/02/24]</p>
+      <p>MERXYZ4 Ivory Black | Black Bile [Premier]</p>
       <a></a>
+    </div>
   </div>
-
-  <script>
-    const displayTime = document.querySelector(".display-time");
-    // Time
-    function showTime() {
-      let time = new Date();
-      displayTime.innerText = time.toLocaleTimeString("en-US", { hour12: false });
-      setTimeout(showTime, 1000);
-    }
-
-    showTime();
-
-    // Date
-    function updateDate() {
-      let today = new Date();
-
-      // return number
-      let dayName = today.getDay(),
-        dayNum = today.getDate(),
-        month = today.getMonth(),
-        year = today.getFullYear();
-
-      const months = [
-        "January",
-        "February",
-        "March",
-        "April",
-        "May",
-        "June",
-        "July",
-        "August",
-        "September",
-        "October",
-        "November",
-        "December",
-      ];
-      const dayWeek = [
-        "Sunday",
-        "Monday",
-        "Tuesday",
-        "Wednesday",
-        "Thursday",
-        "Friday",
-        "Saturday",
-      ];
-      // value -> ID of the html element
-      const IDCollection = ["day", "daynum", "month", "year"];
-      // return value array with number as a index
-      const val = [dayWeek[dayName], dayNum, months[month], year];
-      for (let i = 0; i < IDCollection.length; i++) {
-        document.getElementById(IDCollection[i]).firstChild.nodeValue = val[i];
-      }
-    }
-
-    updateDate();
-  </script>
-
-  <script>
-     let body = document.body;
-     let bodyBackgroundImages = ['Background1.jpeg', 'Background2.jpeg', 'Background3.jpeg', 'Background4.jpeg', 'Background5.jpeg', 'Background6.jpeg'];
-
-    function random () {
-    let randomIndexBg = Math.floor(Math.random() * bodyBackgroundImages.length);
-    let randomBodyBackgroundImage = bodyBackgroundImages[randomIndexBg];
-    body.style.backgroundImage = `url('${randomBodyBackgroundImage}')`;
-    }
-
-    random();
-  </script>
-  </div>
-
+  <script src="./Audio Server Script.js"></script>
 </body>
-
 </html>
