@@ -1,4 +1,4 @@
-let body = document.body;
+/*let body = document.body;
 let bodyBackgroundImages = ['Background1.jpeg', 'Background2.jpeg', 'Background3.jpeg', 'Background4.jpeg', 'Background5.jpeg', 'Background6.jpeg'];
 
 function random() {
@@ -7,7 +7,7 @@ function random() {
     body.style.backgroundImage = `url('${randomBodyBackgroundImage}')`;
 }
 
-random();
+random();*/
 
 let playButton = document.getElementById('play-button');
 let pauseButton = document.getElementById('pause-button');
