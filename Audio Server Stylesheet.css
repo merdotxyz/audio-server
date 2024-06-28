@@ -10,6 +10,8 @@ body {
     color: rgb(103, 98, 98);
     word-spacing: 5px;
     letter-spacing: 1px;
+    overflow: scroll;
+
     
    
 
