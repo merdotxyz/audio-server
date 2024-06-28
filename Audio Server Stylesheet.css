@@ -1,7 +1,5 @@
 body {
     background-image: url('bg1.jpg');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
     background-size: 190%;
     background-color: black;
     background-position: center;
@@ -10,8 +8,9 @@ body {
     color: rgb(103, 98, 98);
     word-spacing: 5px;
     letter-spacing: 1px;
-    overflow: scroll;
     height: 100vh;
+    overflow: scroll;
+   
 
     
    
