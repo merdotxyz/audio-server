@@ -2,16 +2,14 @@ body {
     background-image: url('bg1.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-size: 100%;
+    background-size: 190%;
     background-color: black;
- 
+    background-position: center;
     font-family: 'Times New Roman', Times, serif;
     font-size: 12px;
     color: rgb(103, 98, 98);
     word-spacing: 5px;
     letter-spacing: 1px;
-    overflow: scroll;
-    height: 100vh;
 
     
    
@@ -23,7 +21,8 @@ body {
 
 
 .container {
-  
+    height: 100vh;
+    overflow: scroll;
     
 
 }
