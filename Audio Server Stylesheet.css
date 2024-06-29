@@ -1,8 +1,8 @@
 body {
-    background-image: url('bg1.jpg');
+    background-image: url('bg2.png');
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-size: 190%;
+    background-size: cover;
     background-color: black;
     background-position: center;
     font-family: 'Times New Roman', Times, serif;
