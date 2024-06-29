@@ -3,7 +3,6 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    background-color: black;
     background-position: center;
     font-family: 'Times New Roman', Times, serif;
     font-size: 12px;
@@ -21,7 +20,7 @@ body {
 
 
 .container {
-    height: 100vh;
+    height: 98vh;
     overflow: scroll;
     
 
