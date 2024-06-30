@@ -10,21 +10,11 @@ body {
     word-spacing: 5px;
     letter-spacing: 1px;
     background-color: black;
-
-
-    
-   
-
-
 }
-
-
-
 
 .container {
     height: 98vh;
-    overflow: scroll;
-    
+    overflow: scroll;   
 
 }
 
@@ -39,8 +29,6 @@ body {
     letter-spacing: 1px;
     padding: 0;
     
-    
-
 }
 
 #pause-button {
@@ -61,3 +49,10 @@ body {
 a {
     color: rgb(103, 98, 98);
 }
+
+@media screen and (max-width: 600px) {
+    .container {
+      height: 88vh;
+    }
+  }
+  
